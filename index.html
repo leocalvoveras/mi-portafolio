@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Portafolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    scroll-behavior: smooth;
+    background: radial-gradient(circle at top left, #000000, #000000 30%, #0a3dff 60%, #ffffff 100%);
+    background-attachment: fixed;
+    margin: 0;
+}
+    a { text-decoration:none; color:inherit; }
+
+/* Todas las secciones transparentes para mostrar el fondo del body */
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px;
+    background: transparent; /* Fundamental */
+    position: relative;
+}
+
+/* Slider y cards también transparentes para no tapar el fondo */
+.slider, .slider-track, .card {
+    background: transparent;
+}
+
+/* Footer también transparente */
+footer {
+    background: transparent;
+    border-top: 1px solid rgba(255,255,255,0.2); /* Opcional para separar visualmente */
+    
+}
+
+/* Navbar transparente */
+nav {
+    background: transparent;
+}
+
+
+    /* NAVBAR */
+    nav { color:#000c3b; display:flex; justify-content:space-between; align-items:center; padding:20px 50px;  position:sticky; top:0; z-index:100; }
+    nav .logo { font-size:1.8rem; font-weight:700; color:#0a3dff; }
+    nav ul { display:flex; gap:30px; }
+    nav ul li { list-style:none; font-size:1rem; cursor:pointer; transition:.3s; }
+    nav ul li:hover { font-size:1.5rem; color:#0a3dff; }
+
+    /* SECCIONES GENERALES */
+    section { min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:flex-start; padding:50px; position:relative; }
+    h1,h2,h3,p { margin-bottom:20px; }
+    h1 { font-size:3rem; animation:fadeInUp 1.5s ease forwards; }
+    p { font-size:1rem; line-height:1.6; }
+
+    button { padding:15px 30px; font-size:1rem; background:#0a3dff; border:none; color:#fff; cursor:pointer; transition:.3s; }
+    button:hover { background:#fff; color:#0a3dff; }
+
+    @keyframes fadeInUp { 0%{opacity:0; transform:translateY(20px);} 100%{opacity:1; transform:translateY(0);} }
+
+    /* PORTADA */
+    .portada {background: url('https://images.unsplash.com/photo-1600181957373-36a7b158f3c0?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat fixed; color:#fff; }
+    .portada img { width:150px; border-radius:50%; margin-bottom:20px; }
+
+    /* SECCIÓN DE SLIDER PARA PROYECTOS/LOGROS */
+    .slider { position:relative; padding:50px 20px; overflow:hidden; width:100%; }
+    .slider-track { display:flex; gap:30px; transition: transform .5s ease-in-out; }
+    .card { background:#1a1a1a; padding:20px; border-radius:10px; text-align:center; flex:0 0 250px; transition:transform .3s; }
+    .card:hover { transform:scale(1.05); }
+    .card img { width:100%; border-radius:10px; margin-bottom:15px; transition: transform .5s; }
+    .card img:hover { transform:scale(1.1); }
+
+    .slider-btn { position:absolute; top:50%; transform:translateY(-50%); background:#0a3dff(255,0,0,.7); border:none; color:#fff; font-size:2rem; padding:10px; cursor:pointer; z-index:10; border-radius:50%; }
+    .slider-btn:hover { background:#a7b2cb; }
+    .prev-btn { left:10px; } .next-btn { right:10px; }
+
+    /* FOOTER */
+    footer {background: radial-gradient(circle at top left, #000000, #000000 30%, #0a3dff 60%, #ffffff 100%); ; padding:30px 50px; display:flex; justify-content:space-between; flex-wrap:wrap; border-top:1px solid #333; }
+    footer div { margin-bottom:10px; }
+    footer a { color:#1225b9; margin-right:15px; transition:.3s; }
+    footer a:hover { font-size:1.5rem; color:#0a3dff; }
+
+    @media(max-width:768px){ nav ul{gap:15px;} h1{font-size:2rem;} section{padding:30px;} }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">Mi Portafolio</div>
+    <ul>
+        <li><b><a href="#portada">Portada</a></b></li>
+        <li><b><a href="#presentacion">Presentación</a></b></li>
+        <li><b><a href="#competencias">Competencias</a></b></li>
+        <li><b><a href="#logros">Logros</a></b></li>
+        <li><b><a href="#propuesta">Propuesta</a></b></li>
+        <li><b><a href="#futuro">Futuro</a></b></li>
+        <li><b><a href="#contacto">Contacto</a></b></li>
+    </ul>
+</nav>
+
+<!-- PORTADA -->
+<section class="portada" id="portada">
+    <img src="foto_profesional.jpg" alt="Foto profesional">
+    <h1>Leo Calvo</h1>
+    <p>Disfrutar al maximo que vida solo hay una</p>
+</section>
+
+<hr>
+<!-- PRESENTACIÓN -->
+<section id="presentacion">
+    <h2>Presentación Personal</h2>
+    <p>Hola, soy [Tu Nombre], apasionado por [tus pasiones]. Me motiva [lo que te mueve]. Mis valores incluyen [valores personales].</p>
+</section>
+<hr>
+<!-- COMPETENCIAS -->
+<section id="competencias">
+    <h2>Competencias Emprendedoras</h2>
+    <p>Habilidades: creatividad, iniciativa, resiliencia, liderazgo y trabajo en equipo.</p>
+    <p>Ejemplos de desarrollo: participación en proyectos escolares, actividades extracurriculares y retos personales.</p>
+</section>
+<hr>
+<!-- LOGROS -->
+<section id="logros">
+    <h2>Logros y Experiencias</h2>
+    <div class="slider">
+        <button class="slider-btn prev-btn">&#10094;</button>
+        <div class="slider-track">
+            <div class="card">
+                <img src="https://via.placeholder.com/250" alt="Proyecto 1">
+                <h3>Proyecto Escolar</h3>
+                <p>Descripción breve de mi participación y logro.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/250" alt="Proyecto 2">
+                <h3>Voluntariado</h3>
+                <p>Descripción breve de actividad voluntaria y aprendizaje.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/250" alt="Proyecto 3">
+                <h3>Curso / Certificación</h3>
+                <p>Detalles de formación adicional relevante.</p>
+            </div>
+        </div>
+        <button class="slider-btn next-btn">&#10095;</button>
+    </div>
+</section>
+<hr>
+<!-- PROPUESTA DE VALOR -->
+<section id="propuesta">
+    <h2>Propuesta de Valor</h2>
+    <p>Me diferencio por [tus cualidades únicas]. Puedo aportar valor en [entorno o proyectos].</p>
+</section>
+<hr>
+<!-- IDEAS Y FUTURO -->
+<section id="futuro">
+    <h2>Ideas, Intereses y Proyectos Futuros</h2>
+    <p>Mis ideas emprendedoras: [ideas].</p>
+    <p>Deseo aprender y desarrollarme en [áreas de interés].</p>
+    <p>Me visualizo trabajando en [tipo de entorno].</p>
+</section>
+<hr>
+<!-- CONTACTO -->
+<section id="contacto">
+    <h2>Contacto</h2>
+    <p>"Frase final inspiradora o reflexiva"</p>
+    <p>Email: ejemplo@correo.com | Tel: +123456789</p>
+    <p>Descarga mi CV: <a href="#">Enlace</a></p>
+</section>
+<hr>
+<!-- FOOTER -->
+<footer>
+    <div>&copy; 2025 Mi Portafolio</div>
+    <div>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter</a>
+    </div>
+</footer>
+
+<!-- JS SLIDER -->
+<script>
+const track = document.querySelector('.slider-track');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+let index = 0;
+
+const slide = () => {
+    const cardWidth = document.querySelector('.card').offsetWidth + 30;
+    track.style.transform = `translateX(-${index * cardWidth}px)`;
+}
+
+nextBtn.addEventListener('click', () => {
+    if(index < track.children.length - 3) index++;
+    else index = 0;
+    slide();
+});
+
+prevBtn.addEventListener('click', () => {
+    if(index > 0) index--;
+    else index = track.children.length - 3;
+    slide();
+});
+
+// Auto-slide cada 4 segundos
+setInterval(() => { nextBtn.click(); }, 4000);
+</script>
+
+</body>
+</html>
